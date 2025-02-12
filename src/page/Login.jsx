@@ -6,7 +6,7 @@ function Login() {
     <div className="flex items-center justify-center min-h-screen bg-black" >
         <div className='w-80'>
         <div className=" border p-6 shadow-lg text-white text-center">
-        <h1 className="text-4xl  text-center mb-10 logo ">Instagram</h1>
+        <h1 className="text-4xl  text-center mb-10 logo ">Globchat</h1>
         
        
 

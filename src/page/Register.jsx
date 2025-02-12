@@ -7,7 +7,7 @@ function Register() {
     <div className="flex items-center justify-center min-h-screen bg-black" >
         <div className="w-80">
         <div className=" border p-6 shadow-lg text-white">
-        <h1 className="text-4xl  text-center mb-2 logo">Instagram</h1>
+        <h1 className="text-4xl  text-center mb-2 logo">Globchat</h1>
         <p className="text-bold text-gray-400 text-center mb-4">
           Sign up to see photos and videos <br/> from your friends.
         </p>
