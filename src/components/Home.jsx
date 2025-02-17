@@ -4,6 +4,7 @@ import MiddleSide from './MiddleSide'
 import RightSide from './RightSide'
 
 function Home() {
+  
   return (
     <div className='flex h-screen '>
         <div className='leftSide '>
