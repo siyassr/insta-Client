@@ -4,7 +4,7 @@ import PostSec from './PostSec'
 
 function MiddleSide() {
   return (
-    <div>
+    <div className='  '>
       {/* <div className='stroySec'> */}
         <StoryBlock/>
         <PostSec/>

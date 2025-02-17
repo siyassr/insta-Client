@@ -2,7 +2,7 @@ import React from 'react'
 import Img1 from "../assets/images/image.png";
 function RightSide() {
   return (
-    <div className='ml-28 mt-9 mr-28'>
+    <div className='mr-24 ml-16 mt-9'>
       <div>
         <div className='flex  justify-between items-center mb-8'>
           <div className='flex gap-3 items-center'>
