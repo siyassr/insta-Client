@@ -4,6 +4,8 @@ import Login from '../page/Login';
 import Register from '../page/Register';
 import Forget from '../page/Forget';
 import Home from '../components/Home';
+import Chat from '../components/Chat';
+import Profile from '../components/Profile';
 
 function LayoutRoute() {
   return (
@@ -26,6 +28,15 @@ function LayoutRoute() {
                <Route
              path='/'
              element = {<Home/>}
+            />
+            <Route
+            path='/chat'
+            element={<Chat/>}
+            />
+
+           <Route
+            path='/profile'
+            element={<Profile/>}
             />
 
         </Routes>
