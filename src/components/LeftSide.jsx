@@ -1,190 +1,3 @@
-
-// import React, { useState } from "react";
-// import { motion } from "framer-motion";
-// import { GoHomeFill } from "react-icons/go";
-// import { CiSearch, CiSquarePlus } from "react-icons/ci";
-// import { MdExplore, MdSlowMotionVideo } from "react-icons/md";
-// import { FaFacebookMessenger, FaRegHeart } from "react-icons/fa";
-// import { BsFileBarGraph } from "react-icons/bs";
-// import SearchBar from "./SearchBar";
-// import NotificationBar from "./NotificationBar";
-
-// function LeftSide() {
-//   const [isCollapsed, setIsCollapsed] = useState(false);
-//   const [activePanel, setActivePanel] = useState(null); 
-
-//   const toggleSidebar = () => setIsCollapsed(!isCollapsed);
-
-//   const togglePanel = (panel) => {
-//     setActivePanel((prev) => (prev === panel ? null : panel));
-//     if (activePanel !== panel) setIsCollapsed(true); 
-//   };
-
-//   return (
-//     <div className="flex">
-
-//       <motion.div
-//         animate={{ width: isCollapsed ? 250 : 250 }}
-//         transition={{ duration: 0.3 }}
-//         className="fixed top-0 left-0 h-full text-white p-5 flex flex-col items-start"
-//       >
-
-//         <motion.h2
-//           initial={{ opacity: 0 }}
-//           animate={{ opacity: isCollapsed ? 0 : 1 }}
-//           transition={{ duration: 0.2 }}
-//           className="text-4xl mb-10"
-//         >
-//           GlobChat
-//         </motion.h2>
-
-
-//         <div className="flex flex-col gap-2">
-//           {[
-//             { icon: <GoHomeFill size={28} />, label: "Home" },
-//             { icon: <CiSearch size={28} />, label: "Search", action: () => togglePanel("search") },
-//             { icon: <MdExplore size={28} />, label: "Explore" },
-//             { icon: <MdSlowMotionVideo size={28} />, label: "Reels" },
-//             { icon: <FaFacebookMessenger size={28} />, label: "Messages" },
-//             { icon: <FaRegHeart size={28} />, label: "Notifications", action: () => togglePanel("notifications") },
-//             { icon: <CiSquarePlus size={28} />, label: "Create" },
-//             { icon: <BsFileBarGraph size={28} />, label: "Dashboard" },
-//             { icon: <BsFileBarGraph size={28} />, label: "Profile" },
-//           ].map((item, index) => (
-//             <motion.div
-//               key={index}
-//               whileHover={{ scale: 1.1 }}
-//               transition={{ type: "spring", stiffness: 200 }}
-//               className="flex items-center gap-3 p-3 hover:bg-gray-700 rounded-lg cursor-pointer"
-//               onClick={item.action}
-//             >
-//               {item.icon}
-//               {!isCollapsed && <h5>{item.label}</h5>}
-//             </motion.div>
-//           ))}
-//         </div>
-//       </motion.div>
-
-//       {activePanel === "search" && (
-//         <motion.div
-//           initial={{ opacity: 0, x: -100 }}
-//           animate={{ opacity: 1, x: 0 }}
-//           exit={{ opacity: 0, x: -100 }}
-//           transition={{ duration: 0.3 }}
-//           className="ml-[80px] p-2 w-[400px] bg-black text-white rounded-lg absolute border-r-2 border-gray-500"
-//         >
-//           <SearchBar />
-//         </motion.div>
-//       )}
-
-//       {activePanel === "notifications" && (
-//         <motion.div
-//           initial={{ opacity: 0, x: -100 }}
-//           animate={{ opacity: 1, x: 0 }}
-//           exit={{ opacity: 0, x: -100 }}
-//           transition={{ duration: 0.3 }}
-//           className="ml-[80px] p-2 w-[400px] bg-black text-white rounded-lg absolute border-r-2 border-gray-500"
-//         >
-//           <NotificationBar />
-//         </motion.div>
-//       )}
-//     </div>
-//   );
-// }
-
-// export default LeftSide;
-
-<<<<<<< HEAD
-
-
-=======
-// import React, { useState } from "react";
-// import { motion } from "framer-motion";
-// import { GoHomeFill } from "react-icons/go";
-// import { CiSearch, CiSquarePlus } from "react-icons/ci";
-// import { MdExplore, MdSlowMotionVideo } from "react-icons/md";
-// import { FaFacebookMessenger, FaRegHeart } from "react-icons/fa";
-// import { BsFileBarGraph } from "react-icons/bs";
-// import SearchBar from "./SearchBar";
-// import Img2 from "../assets/images/WhatsApp_Image_2025-02-18_at_00.10.48_2be6d755-removebg-preview.png"
-
-// function LeftSide() {
-//   const [isCollapsed, setIsCollapsed] = useState(false);
-//   const [showSearch, setShowSearch] = useState(false);
-
-//   const toggleSidebar = () => setIsCollapsed(!isCollapsed);
-
-//   const toggleSearch = () => {
-//     setShowSearch((prev) => !prev);
-//     setIsCollapsed((prev) => (prev || showSearch ? false : true));
-//   };
-
-//   return (
-//     <div className=" flex">
-    
-//       <motion.div
-//         animate={{ width: isCollapsed ? 250 : 250 }}
-//         transition={{ duration: 0.3 }}
-//         className="fixed top-0 left-0 h-full text-white p-5 flex flex-col items-start"
-//       >
-
- 
-//     <motion.h2
-//       initial={{ opacity: 0 }}
-//       animate={{ opacity: isCollapsed ? 0 : 1 }}
-//       transition={{ duration: 0.2 }}
-//       className="text-4xl mb-10"
-//     >
-//       GlobChat
-//     </motion.h2>
-
-
-     
-//         <div className="flex flex-col gap-2">
-//           {[
-//             { icon: <GoHomeFill size={28} />, label: "Home" },
-//             { icon: <CiSearch size={28} />, label: "Search", action: toggleSearch },
-//             { icon: <MdExplore size={28} />, label: "Explore" },
-//             { icon: <MdSlowMotionVideo size={28} />, label: "Reels" },
-//             { icon: <FaFacebookMessenger size={28} />, label: "Messages" },
-//             { icon: <FaRegHeart size={28} />, label: "Notifications" },
-//             { icon: <CiSquarePlus size={28} />, label: "Create" },
-//             { icon: <BsFileBarGraph size={28} />, label: "Dashboard" },
-//             { icon: <BsFileBarGraph size={28} />, label: "Profile" },
-//           ].map((item, index) => (
-//             <motion.div
-//               key={index}
-//               whileHover={{ scale: 1.1 }}
-//               transition={{ type: "spring", stiffness: 200 }}
-//               className="flex items-center gap-3 p-3 hover:bg-gray-700 rounded-lg cursor-pointer"
-//               onClick={item.action}
-//             >
-//               {item.icon}
-//               {!isCollapsed && <h5>{item.label}</h5>}
-//             </motion.div>
-//           ))}
-//         </div>
-//       </motion.div>
-
-//       {showSearch && (
-//         <motion.div
-//           initial={{ opacity: 0, x: -100 }}
-//           animate={{ opacity: 1, x: 0 }}
-//           exit={{ opacity: 0, x: -100 }}
-//           transition={{ duration: 0.3 }}
-//           className="ml-[80px] p-2 pl-0 w-[400px] bg-black text-white rounded-lg absolute border-r-2 border-gray-500"
-//         >
-//           <SearchBar />
-//         </motion.div>
-//       )}
-//     </div>
-//   );
-// }
-
-// export default LeftSide;
->>>>>>> c118499e74e9833208425ce0ea2933ac9112632e
-
-
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { GoHomeFill } from "react-icons/go";
@@ -192,91 +5,86 @@ import { CiSearch, CiSquarePlus } from "react-icons/ci";
 import { MdExplore, MdSlowMotionVideo } from "react-icons/md";
 import { FaFacebookMessenger, FaRegHeart } from "react-icons/fa";
 import { BsFileBarGraph } from "react-icons/bs";
+import { HiOutlineVideoCamera } from "react-icons/hi";
+import { AiOutlineLineChart } from "react-icons/ai";
+import { IoSparklesOutline } from "react-icons/io5";
 import SearchBar from "./SearchBar";
 import NotificationBar from "./NotificationBar";
-<<<<<<< HEAD
-import { useNavigate } from "react-router-dom";
-=======
-import Img2 from "../assets/images/WhatsApp_Image_2025-02-18_at_00.10.48_2be6d755-removebg-preview.png";
->>>>>>> c118499e74e9833208425ce0ea2933ac9112632e
+import { useNavigate, useLocation } from "react-router-dom";
+import CreatePostModal from "../Modals/CreatePostModal"
 
 function LeftSide() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const location = useLocation();
   const [isCollapsed, setIsCollapsed] = useState(false);
-<<<<<<< HEAD
-  const [activePanel, setActivePanel] = useState(null);
-  const [isChatOpen, setIsChatOpen] = useState(false); 
-
-  const togglePanel = (panel) => {
-    setActivePanel((prev) => (prev === panel ? null : panel));
-=======
   const [showSearch, setShowSearch] = useState(false);
   const [showNotifications, setShowNotifications] = useState(false);
-
-  const toggleSidebar = () => setIsCollapsed(!isCollapsed);
-
+  const [showCreateDropdown, setShowCreateDropdown] = useState(false);
+  const [showCreateModal, setShowCreateModal] = useState(false);
+  const [modalType, setModalType] = useState(null);
 
   const toggleSearch = () => {
-    setShowSearch((prev) => !prev);
-    setIsCollapsed((prev) => (prev || showSearch ? false : true));
-    setShowNotifications(false)
+    setShowSearch(!showSearch);
+    setShowNotifications(false);
   };
-
 
   const toggleNotifications = () => {
-    setShowNotifications((prev) => !prev);
-   
-    setIsCollapsed((prev) => (prev || showNotifications ? false : true));
-    setShowSearch(false); 
->>>>>>> c118499e74e9833208425ce0ea2933ac9112632e
+    setShowNotifications(!showNotifications);
+    setShowSearch(false);
   };
+
+  const toggleCreateDropdown = () => setShowCreateDropdown((prev) => !prev);
 
   return (
     <div className="flex">
-      <motion.div
-        animate={{ width: isCollapsed ? 250 : 250 }}
-        transition={{ duration: 0.3 }}
-        className="fixed top-0 left-0 h-full text-white p-5 flex flex-col items-start"
-      >
-        <motion.h2
-          initial={{ opacity: 0 }}
-          animate={{ opacity: isCollapsed ? 0 : 1 }}
-          transition={{ duration: 0.2 }}
-          className="text-4xl mb-10"
-        >
-          GlobChat
-        </motion.h2>
+      <motion.div className="fixed top-0 left-0 h-full text-white p-5 flex flex-col items-start">
+        <motion.h2 className="text-4xl mb-10">GlobChat</motion.h2>
 
         <div className="flex flex-col gap-2">
           {[
-<<<<<<< HEAD
-            { icon: <GoHomeFill size={28} />, label: "Home" ,action:() => navigate('/')},
-            { icon: <CiSearch size={28} />, label: "Search", action: () => togglePanel("search") },
-            { icon: <MdExplore size={28} />, label: "Explore" },
-            { icon: <MdSlowMotionVideo size={28} />, label: "Reels" },
-            { icon: <FaFacebookMessenger size={28} />, label: "Messages", action: () => navigate("/chat")  },
-            { icon: <FaRegHeart size={28} />, label: "Notifications", action: () => togglePanel("notifications") },
-=======
-            { icon: <GoHomeFill size={28} />, label: "Home" },
+            { icon: <GoHomeFill size={28} />, label: "Home", action: () => navigate("/") },
             { icon: <CiSearch size={28} />, label: "Search", action: toggleSearch },
             { icon: <MdExplore size={28} />, label: "Explore" },
             { icon: <MdSlowMotionVideo size={28} />, label: "Reels" },
-            { icon: <FaFacebookMessenger size={28} />, label: "Messages" },
+            { icon: <FaFacebookMessenger size={28} />, label: "Messages", action: () => navigate("/chat") },
             { icon: <FaRegHeart size={28} />, label: "Notifications", action: toggleNotifications },
->>>>>>> c118499e74e9833208425ce0ea2933ac9112632e
-            { icon: <CiSquarePlus size={28} />, label: "Create" },
-            { icon: <BsFileBarGraph size={28} />, label: "Dashboard" },
-            { icon: <BsFileBarGraph size={28} />, label: "Profile" ,action: () => navigate("/profile")  },
+            { icon: <CiSquarePlus size={28} />, label: "Create", action: toggleCreateDropdown },
+            { icon: <BsFileBarGraph size={28} />, label: "Profile", action: () => navigate("/profile") },
           ].map((item, index) => (
             <motion.div
               key={index}
-              whileHover={{ scale: 1.1 }}
-              transition={{ type: "spring", stiffness: 200 }}
-              className="flex items-center gap-3 p-3 hover:bg-gray-700 rounded-lg cursor-pointer"
+              className="flex items-center gap-3 p-3 hover:bg-gray-700 rounded-lg cursor-pointer relative"
               onClick={item.action}
             >
               {item.icon}
-              {!isCollapsed && <h5>{item.label}</h5>}
+              {!isCollapsed && location.pathname !== "/chat" && <h5>{item.label}</h5>}
+
+              {item.label === "Create" && showCreateDropdown && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 10 }}
+                  className="absolute left-0 top-0 mt-14 w-40 bg-gray-900 text-white rounded-lg shadow-lg p-2 z-50"
+                >
+                  <div className="flex flex-col">
+                    {[ 
+                      { icon: <CiSquarePlus size={20} />, label: "Post" , action: () => setModalType("post"),},
+                      { icon: <HiOutlineVideoCamera size={20} />, label: "Live video" ,action: () => setModalType("live")},
+                      // { icon: <AiOutlineLineChart size={20} />, label: "Ad" },
+                   
+                    ].map((option, idx) => (
+                      <div
+                        key={idx}
+                        className="flex items-center gap-2 p-2 hover:bg-gray-700 rounded-md cursor-pointer"
+                        onClick={option.action}
+                      >
+                        {option.icon}
+                        <span>{option.label}</span>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
             </motion.div>
           ))}
         </div>
@@ -286,9 +94,7 @@ function LeftSide() {
         <motion.div
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -100 }}
-          transition={{ duration: 0.3 }}
-          className="ml-[80px] p-2 w-[400px] bg-black text-white rounded-lg absolute border-r-2 border-gray-500"
+          className="ml-[70px] p-2 w-[400px] bg-black text-white rounded-lg absolute border-r-2 border-gray-500"
         >
           <SearchBar />
         </motion.div>
@@ -298,132 +104,15 @@ function LeftSide() {
         <motion.div
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -100 }}
-          transition={{ duration: 0.3 }}
-          className="ml-[80px] p-2 w-[400px] bg-black text-white rounded-lg absolute border-r-2 border-gray-500"
+          className="ml-[70px] p-2 w-[400px] bg-black text-white rounded-lg absolute border-r-2 border-gray-500"
         >
           <NotificationBar />
         </motion.div>
       )}
 
-      {/* Chat Modal */}
-      {/* {isChatOpen && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-          <motion.div
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -50 }}
-            transition={{ duration: 0.3 }}
-            className=" text-white w-full h-full rounded-lg shadow-lg "
-          >
-          
-            <Chat />
-          </motion.div>
-        </div>
-      )} */}
+{modalType && <CreatePostModal isOpen={!!modalType} onClose={() => setModalType(null)} modalType={modalType} />}
     </div>
   );
 }
 
 export default LeftSide;
-
-
-// import React, { useState } from "react";
-// import { motion } from "framer-motion";
-// import { GoHomeFill } from "react-icons/go";
-// import { CiSearch, CiSquarePlus } from "react-icons/ci";
-// import { MdExplore, MdSlowMotionVideo } from "react-icons/md";
-// import { FaFacebookMessenger, FaRegHeart } from "react-icons/fa";
-// import { BsFileBarGraph } from "react-icons/bs";
-// import SearchBar from "./SearchBar";
-// import NotificationBar from "./NotificationBar";
-// import Img2 from "../assets/images/WhatsApp_Image_2025-02-18_at_00.10.48_2be6d755-removebg-preview.png";
-
-// function LeftSide() {
-//   const [isCollapsed, setIsCollapsed] = useState(false);
-//   const [activeComponent, setActiveComponent] = useState(null); // "search" or "notifications"
-
-//   const toggleSidebar = () => setIsCollapsed(!isCollapsed);
-
-//   const toggleSearch = () => {
-//     // Toggle search and hide notifications if shown
-//     setActiveComponent((prev) => (prev === "search" ? null : "search"));
-//     setActiveComponent((prev) => (prev === "notifications" ? null : prev));
-//   };
-
-//   const toggleNotifications = () => {
-//     // Toggle notifications and hide search if shown
-//     setActiveComponent((prev) => (prev === "notifications" ? null : "notifications"));
-//     setActiveComponent((prev) => (prev === "search" ? null : prev));
-//   };
-
-//   return (
-//     <div className="flex">
-//       <motion.div
-//         animate={{ width: isCollapsed ? 250 : 250 }}
-//         transition={{ duration: 0.3 }}
-//         className="fixed top-0 left-0 h-full text-white p-5 flex flex-col items-start"
-//       >
-//         <motion.h2
-//           initial={{ opacity: 0 }}
-//           animate={{ opacity: isCollapsed ? 0 : 1 }}
-//           transition={{ duration: 0.2 }}
-//           className="text-4xl mb-10"
-//         >
-//           GlobChat
-//         </motion.h2>
-
-//         <div className="flex flex-col gap-2">
-//           {[
-//             { icon: <GoHomeFill size={28} />, label: "Home" },
-//             { icon: <CiSearch size={28} />, label: "Search", action: toggleSearch },
-//             { icon: <MdExplore size={28} />, label: "Explore" },
-//             { icon: <MdSlowMotionVideo size={28} />, label: "Reels" },
-//             { icon: <FaFacebookMessenger size={28} />, label: "Messages" },
-//             { icon: <FaRegHeart size={28} />, label: "Notifications", action: toggleNotifications },
-//             { icon: <CiSquarePlus size={28} />, label: "Create" },
-//             { icon: <BsFileBarGraph size={28} />, label: "Dashboard" },
-//             { icon: <BsFileBarGraph size={28} />, label: "Profile" },
-//           ].map((item, index) => (
-//             <motion.div
-//               key={index}
-//               whileHover={{ scale: 1.1 }}
-//               transition={{ type: "spring", stiffness: 200 }}
-//               className="flex items-center gap-3 p-3 hover:bg-gray-700 rounded-lg cursor-pointer"
-//               onClick={item.action}
-//             >
-//               {item.icon}
-//               {!isCollapsed && <h5>{item.label}</h5>}
-//             </motion.div>
-//           ))}
-//         </div>
-//       </motion.div>
-
-//       {activeComponent === "search" && (
-//         <motion.div
-//           initial={{ opacity: 0, x: -100 }}
-//           animate={{ opacity: 1, x: 0 }}
-//           exit={{ opacity: 0, x: -100 }}
-//           transition={{ duration: 0.3 }}
-//           className="ml-[80px] p-2 w-[400px] bg-black text-white rounded-lg absolute border-r-2 border-gray-500"
-//         >
-//           <SearchBar />
-//         </motion.div>
-//       )}
-
-//       {activeComponent === "notifications" && (
-//         <motion.div
-//           initial={{ opacity: 0, x: -100 }}
-//           animate={{ opacity: 1, x: 0 }}
-//           exit={{ opacity: 0, x: -100 }}
-//           transition={{ duration: 0.3 }}
-//           className="ml-[80px] p-2 w-[400px] bg-black text-white rounded-lg absolute border-r-2 border-gray-500"
-//         >
-//           <NotificationBar />
-//         </motion.div>
-//       )}
-//     </div>
-//   );
-// }
-
-// export default LeftSide;

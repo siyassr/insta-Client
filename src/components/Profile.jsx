@@ -1,7 +1,12 @@
 import React from "react";
 import LeftSide from "./LeftSide";
+import { useNavigate } from "react-router-dom";
 
 function Profile() {
+  const navigate = useNavigate()
+  const RedirectEdit=() =>{
+     navigate('/edit')
+  }
   return (
     <>
     <LeftSide/>
@@ -40,7 +45,7 @@ function Profile() {
 
    
         <div className="flex gap-3 mt-5">
-          <button className="bg-gray-800 px-4 py-2 rounded-lg text-white text-sm hover:bg-gray-700">
+          <button className="bg-gray-800 px-4 py-2 rounded-lg text-white text-sm hover:bg-gray-700" onClick={RedirectEdit} >
             Edit Profile
           </button>
           <button className="bg-gray-800 px-4 py-2 rounded-lg text-white text-sm hover:bg-gray-700">
