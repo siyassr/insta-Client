@@ -44,8 +44,8 @@ function LeftSide() {
           {[
             { icon: <GoHomeFill size={28} />, label: "Home", action: () => navigate("/") },
             { icon: <CiSearch size={28} />, label: "Search", action: toggleSearch },
-            { icon: <MdExplore size={28} />, label: "Explore" },
-            { icon: <MdSlowMotionVideo size={28} />, label: "Reels" },
+            { icon: <MdExplore size={28} />, label: "Explore"},
+            { icon: <MdSlowMotionVideo size={28} />, label: "Reels" ,action: () => navigate("/reels")},
             { icon: <FaFacebookMessenger size={28} />, label: "Messages", action: () => navigate("/chat") },
             { icon: <FaRegHeart size={28} />, label: "Notifications", action: toggleNotifications },
             { icon: <CiSquarePlus size={28} />, label: "Create", action: toggleCreateDropdown },

@@ -7,6 +7,8 @@ import Home from '../components/Home';
 import Chat from '../components/Chat';
 import Profile from '../components/Profile';
 import EditPage from '../components/EditPage';
+import Reels from '../components/Reels';
+import Explore from '../components/Explore';
 
 function LayoutRoute() {
   return (
@@ -42,6 +44,14 @@ function LayoutRoute() {
             <Route
             path='/edit'
             element={<EditPage/>}
+            />
+             <Route
+            path='/reels'
+            element={<Reels/>}
+            />
+             <Route
+            path='/explore'
+            element={<Explore/>}
             />
 
         </Routes>
