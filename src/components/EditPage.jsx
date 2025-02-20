@@ -7,10 +7,10 @@ const EditPage = () => {
     <LeftSide/>
     <div className="min-h-screen bg-black text-white flex justify-center items-center">
       <div className="w-full max-w-lg p-6 rounded-lg shadow-lg">
-        {/* Profile Section */}
+
         <div className="flex items-center gap-4">
           <img
-            src="https://via.placeholder.com/50" // Replace with user's profile image
+            src="https://via.placeholder.com/50" 
             alt="Profile"
             className="w-14 h-14 rounded-full"
           />

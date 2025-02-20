@@ -20,7 +20,7 @@ const CreatePostModal = ({ isOpen, onClose, modalType }) => {
       className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"
     >
       <div className="bg-gray-900 p-6 rounded-lg w-[450px] text-white shadow-lg">
-        {/* Post Modal */}
+      
         {modalType === "post" && (
           <>
             <h2 className="text-center text-lg font-semibold">Create new post</h2>
@@ -43,7 +43,7 @@ const CreatePostModal = ({ isOpen, onClose, modalType }) => {
           </>
         )}
 
-        {/* Live Video Modal */}
+      
         {modalType === "live" && (
           <>
             <h2 className="text-center text-lg font-semibold">Live video</h2>
@@ -87,7 +87,7 @@ const CreatePostModal = ({ isOpen, onClose, modalType }) => {
           </>
         )}
 
-        {/* Close Button */}
+      
         <button onClick={onClose} className="mt-5 w-full py-2 bg-gray-700 text-white rounded-md">
           Close
         </button>
